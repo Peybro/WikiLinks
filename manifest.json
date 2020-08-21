@@ -1,0 +1,21 @@
+{
+
+    "manifest_version": 2,
+    "name": "WikiLinks",
+    "version": "1.0",
+  
+    "description": "Adds an anchor link to every heading in Wikipedia.",
+  
+    "icons": {
+      "48": "icons/small.png",
+      "96": "icons/big.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.wikipedia.org/wiki/*"],
+        "js": ["index.js"]
+      }
+    ]
+  
+  }
