@@ -1,30 +1,36 @@
-// const icon = document.createElement("svg")
+document.querySelectorAll(".mw-headline").forEach(headline => {
 
-// icon.setAttribute("aria-hidden", "true")
-// icon.setAttribute("focusable", "false")
-// icon.setAttribute("data-prefix", "fas")
-// icon.setAttribute("data-icon", "link")
-// icon.setAttribute("class", "svg-inline--fa fa-link fa-w-16")
-// icon.setAttribute("role", "img")
-// icon.setAttribute("xmlns", "http://www.w3.org/2000/svg")
-// icon.setAttribute("viewBox", "0 0 512 512")
+    headline.innerHTML = `
+        <a 
+            href="${window.location.href.split("#")[0]}#${headline.getAttribute("id")}"
+            style="color:black; text-decoration:none;">
+            
+            <span 
+                class="anchor"
+                style="
+                    visibility: hidden; 
+                    transition: visibility 0.8s ease-in-out;
+                    position: absolute;
+                    transform: scale(1.1) translateX(-100%) translateY(0.1rem);
+                "
+            >
 
-// const path = document.createElement("path")
-// path.setAttribute("fill", "currentColor")
-// path.setAttribute(
-//     "d",
-//     "M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"
-// )
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                    <path d="M5.712 6.96l.167-.167a1.99 1.99 0 0 1 .896-.518 1.99 1.99 0 0 1 .518-.896l.167-.167A3.004 3.004 0 0 0 6 5.499c-.22.46-.316.963-.288 1.46z"/>
+                    <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z"/>
+                    <path d="M10 9.5a2.99 2.99 0 0 0 .288-1.46l-.167.167a1.99 1.99 0 0 1-.896.518 1.99 1.99 0 0 1-.518.896l-.167.167A3.004 3.004 0 0 0 10 9.501z"/>
+                </svg>
+            </span>
+        </a>
+        ${headline.innerHTML}
+    `;
+    
+    headline.addEventListener("mouseenter",() => {
+        headline.querySelector(".anchor").style.visibility = "visible";
+    });
 
-// icon.appendChild(path)
-
-document.querySelectorAll(".mw-headline").forEach((headline) => {
-    headline.innerHTML = `<a href="${
-        window.location.href.split("#")[0]
-    }#${headline.getAttribute("id")}" style="color:black">${
-        headline.innerHTML
-    }</a>`
+    headline.addEventListener("mouseleave",() => {
+        headline.querySelector(".anchor").style.visibility = "hidden";
+    });
 })
-
-// const styleElem = document.head.appendChild(document.createElement("style"));
-// styleElem.innerHTML = ".mw-headline:hover:before {content: 'X ';}";
