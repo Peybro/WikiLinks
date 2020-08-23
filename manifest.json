@@ -4,7 +4,7 @@
   "name": "WikiLinks",
   "version": "1.0",
 
-  "description": "Adds a link anchor to each headline in a Wikipedia page.",
+  "description": "Adds a link anchor to each headline on a Wikipedia page.",
 
   "icons": {
     "48": "icons/logo-sm.png",
