@@ -1,12 +1,12 @@
-# WikiLinks - A Firefox Addon
+# WikiLinks - a Firefox Addon
 Adds an anchor link to every headline of a Wikipedia article for handy sharing without finding out the correct ID of the heading first.
 
 ## Example & Usage
-If you're reading this on GitHub right now hover with your mouse over 'Example' and see the small icon left to it appear.
+If you're reading this on GitHub right now hover with your mouse over 'Example & Usage' and see the small icon left to it appear.
 Clicking it will modify your current URL such that you can directly share the article you're refering to.
 
 ## Deploy Yourself
-Goto <a href="about:debugging#/runtime/this-firefox">about:debugging</a>, click on "Load temporary Addon" and select 'index.js'.
+Goto <a href="about:debugging#/runtime/this-firefox">about:debugging#/runtime/this-firefox</a>, click on "Load temporary Addon" and select 'index.js'.
 You can change the shown symbol by replacing the SVG in the source code. Just visit <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a> and choose one... Or just stick with the good old plain # .
 
 ## Todo
@@ -26,4 +26,4 @@ You can change the shown symbol by replacing the SVG in the source code. Just vi
 ## Licence
 Released under GNU General Public License v3.0
 </br>
-<b>GNU GPLv3</b> - Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. 
+Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. 
