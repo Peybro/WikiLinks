@@ -1,4 +1,4 @@
-document.querySelectorAll(".mw-headline").forEach(headline => {
+document.querySelectorAll("h2, h3").forEach(headline => {
 
     headline.innerHTML = `
         <a 
