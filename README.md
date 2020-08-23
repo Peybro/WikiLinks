@@ -1,5 +1,5 @@
 # WikiLinks - A Firefox Addon
-Adds an anchor link to every headline of a Wikipedia article for handy sharing.
+Adds an anchor link to every headline of a Wikipedia article for handy sharing without finding out the correct ID of the heading first.
 
 ## Example & Usage
 If you're reading this on GitHub right now hover with your mouse over 'Example' and see the small icon left to it appear.
@@ -25,4 +25,5 @@ You can change the shown symbol by replacing the SVG in the source code. Just vi
 
 ## Licence
 Released under GNU General Public License v3.0
-GNU GPLv3 - Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. 
+</br>
+<b>GNU GPLv3</b> - Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. 
