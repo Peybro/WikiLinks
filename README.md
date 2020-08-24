@@ -1,8 +1,9 @@
 # WikiLinks - a Web Browser Extension
 
-Get it on Mozilla Add-Ons: <a href="https://addons.mozilla.org/de/firefox/addon/wikilinks/">https://addons.mozilla.org/de/firefox/addon/wikilinks/</a>
-</br>
 Adds an anchor link to every headline of a Wikipedia article for handy sharing without finding out the correct ID of the heading first.
+
+<hr>
+Get it on Mozilla Add-Ons: <a href="https://addons.mozilla.org/de/firefox/addon/wikilinks/">https://addons.mozilla.org/de/firefox/addon/wikilinks/</a>
 
 ## Example & Usage
 
