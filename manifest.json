@@ -1,8 +1,8 @@
 {
 
   "manifest_version": 2,
-  "name": "WikiLinks",
-  "version": "2.0",
+  "name": "WikiLinks - Anchors for Wikipedia",
+  "version": "2.0.1",
 
   "description": "Adds a link anchor to each headline on a Wikipedia page.",
 
