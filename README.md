@@ -1,4 +1,4 @@
-# WikiLinks - a Firefox Addon
+# WikiLinks - a Web Browser Extension
 Adds an anchor link to every headline of a Wikipedia article for handy sharing without finding out the correct ID of the heading first.
 
 ## Example & Usage
@@ -6,8 +6,13 @@ If you're reading this on GitHub right now hover with your mouse over 'Example &
 Clicking it will modify your current URL such that you can directly share the article you're refering to.
 
 ## Deploy Yourself
-Goto <a href="about:debugging#/runtime/this-firefox">about:debugging#/runtime/this-firefox</a>, click on "Load temporary Addon" and select 'index.js'.
 You can change the shown symbol by replacing the SVG in the source code. Just visit <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a> and choose one... Or just stick with the good old plain # .
+
+### Firefox
+Goto <a href="about:debugging#/runtime/this-firefox">about:debugging#/runtime/this-firefox</a>, click on "Load temporary Addon" and select 'index.js'.
+
+### Chrome or Chromium Based Browser
+Goto <a href="chrome://extensions/">chrome://extensions/</a>, toggle on "Developer Mode", click "Load unpackaged extension" (or similar) and select 'WikiLinks' folder.
 
 ## Todo
 * [🕑] Deploy as a real Firefox Addon (right now it's just usable via `about:debugging#/runtime/this-firefox`)
