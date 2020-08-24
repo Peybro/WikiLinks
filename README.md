@@ -14,7 +14,7 @@ You can change the shown symbol by replacing the SVG in the source code. Just vi
 * [✅] ~~Replace EventListeners with CSS :hover for better performance~~
 * [✅] ~~Remove the small white space between the headline and the icon~~
 * [💨] ~~Integrate JSX for better source code~~
-* [🔜] Develop for Chromium Brwosers, too
+* [✅] ~~Develop for Chromium Brwosers, too~~ just recognized it already does...
 * [🔜] Add support for ather Wikis, e.g. Fanpedia
 
 ## A few more words
