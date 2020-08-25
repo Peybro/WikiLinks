@@ -1,3 +1,4 @@
+//? icon next to headline
 //* STYLE
 const styleElem = document.head.appendChild(document.createElement("style"))
 styleElem.innerHTML = `
@@ -23,7 +24,6 @@ const icon = `
         <path d="M10 9.5a2.99 2.99 0 0 0 .288-1.46l-.167.167a1.99 1.99 0 0 1-.896.518 1.99 1.99 0 0 1-.518.896l-.167.167A3.004 3.004 0 0 0 10 9.501z"/>
     </svg>
 `
-
 document.querySelectorAll(".mw-headline").forEach((headline) => {
     const link = document.createElement("a")
     link.href = "#" + headline.getAttribute("id")
@@ -32,3 +32,12 @@ document.querySelectorAll(".mw-headline").forEach((headline) => {
     link.insertAdjacentHTML("afterbegin", icon)
     headline.insertBefore(link, headline.firstChild)
 })
+
+//? headline as link
+// document.querySelectorAll(".mw-headline").forEach((headline) => {
+//     const link = document.createElement("a")
+//     link.href = "#" + headline.getAttribute("id")
+//     link.style.color = "black"
+// 	headline.parentNode.insertBefore(link, headline)
+// 	link.appendChild(headline)
+// })
