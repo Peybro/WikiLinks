@@ -4,20 +4,30 @@ const linkBtn = linkToggler.querySelector("#links")
 
 const original = document.querySelectorAll(".mw-headline")
 
-iconBtn.addEventListener("change", () => {
-    reset()
-    if (iconBtn.checked) {
-        icons()
-    } else {
-        links()
-    }
+document.addEventListener("DOMContentLoaded", restoreOptions)
+
+iconBtn.addEventListener("change", (e) => {
+    browser.storage.local.set({
+        link: iconBtn.checked ? iconBtn.value : linkBtn.value,
+    })
 })
 
-icons()
+function restoreOptions() {
+    function setCurrentChoice(result) {
+        alert()
+    }
+
+    function onError(error) {
+        console.log(`Error: ${error}`)
+    }
+
+    let getting = browser.storage.local.get("link")
+    getting.then(setCurrentChoice, onError)
+}
 
 function reset() {
     original.forEach((headline) => {
-        headline.innerHTML = headline
+        headline.innerHTML = headline.innerText
     })
 }
 

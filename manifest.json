@@ -12,6 +12,9 @@
     "default_title": "WikiLinks",
     "default_popup": "index.html"
   },
+  "options_ui": {
+    "page": "index.html"
+  },
   "content_scripts": [
     {
       "matches": [
