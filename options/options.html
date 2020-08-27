@@ -16,12 +16,21 @@
             font-size: medium;
         }
 
+        #icon-reset {
+            float: right;
+        }
+
         input {
             cursor: pointer;
         }
 
-        input[type="submit"] {
+        #btn-save {
             padding: 10px 20px;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
         }
     </style>
 </head>
@@ -31,11 +40,15 @@
     <form>
         <input type="radio" id="icons" name="link" value="icons">
         <label for="icons">icons</label><br>
+
+        <textarea name="icon" id="icon-svg" rows="8" wrap="off"></textarea>
+        <button id="icon-reset" onclick="resetIcon()">reset</button><br><br>
+
         <input type="radio" id="links" name="link" value="links">
         <label for="links">links</label>
         <hr>
         <p id="info">Reload your Wikipedia page to see the change.</p>
-        <input type="submit" value="Save">
+        <button onclick="saveOptions()" id="btn-save">Save</button>
     </form>
 
     <script src="options.js"></script>
