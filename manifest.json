@@ -1,20 +1,18 @@
 {
   "manifest_version": 2,
   "name": "WikiLinks - Anchors for Wikipedia",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Adds a link anchor to each headline on a Wikipedia page.",
   "icons": {
     "48": "icons/logo-sm.png",
     "96": "icons/logo-lg.png"
   },
-  "browser_action": {
-    "default_icon": "icons/logo-sm.png",
-    "default_title": "WikiLinks",
-    "default_popup": "index.html"
-  },
   "options_ui": {
-    "page": "index.html"
+    "page": "options/options.html"
   },
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": [
@@ -24,5 +22,10 @@
         "index.js"
       ]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@example.com"
+    }
+  }
 }
