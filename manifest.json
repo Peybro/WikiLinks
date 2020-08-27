@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "WikiLinks - Anchors for Wikipedia",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Adds a link anchor to each headline on a Wikipedia page.",
   "icons": {
     "48": "icons/logo-sm.png",
