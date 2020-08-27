@@ -5,6 +5,8 @@ function onError(error) {
 function onGot(item) {
     if (item.links) {
         item.links === "icons" ? icons() : links()
+    } else {
+        icons()
     }
 }
 

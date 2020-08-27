@@ -8,13 +8,13 @@ function saveOptions(e) {
 
 function restoreOptions() {
     function setCurrentChoice(result) {
-        if (result.links === "icons") {
+        if (
+            result.links === "icons" ||
+            (result.links !== "icons" && result.links !== "links")
+        ) {
             document.querySelector("#icons").checked = true
         } else if (result.links === "links") {
             document.querySelector("#links").checked = true
-        } else {
-            document.querySelector("#icons").checked = false
-            document.querySelector("#links").checked = false
         }
     }
 
