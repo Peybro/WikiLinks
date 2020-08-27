@@ -1,7 +1,7 @@
 function saveOptions(e) {
     e.preventDefault()
     document.querySelector("#info").style.display = "block"
-    browser.storage.sync.set({
+    browser.storage.local.set({
         links: document.querySelector("#icons").checked ? "icons" : "links",
     })
 }
@@ -22,7 +22,7 @@ function restoreOptions() {
         console.log(`Error: ${error}`)
     }
 
-    let getting = browser.storage.sync.get("links")
+    let getting = browser.storage.local.get("links")
     getting.then(setCurrentChoice, onError)
 }
 

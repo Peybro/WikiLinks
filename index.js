@@ -8,7 +8,7 @@ function onGot(item) {
     }
 }
 
-let getting = browser.storage.sync.get("links")
+let getting = browser.storage.local.get("links")
 getting.then(onGot, onError)
 
 //? icon next to headline
