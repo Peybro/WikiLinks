@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "WikiLinks - linkable sections in Wikipedia",
-  "version": "3.1.0",
-  "description": "Turns all Wikipedia sections into links. To copy a link, click the URL icon left to any section.",
+  "name": "WikiLinks - Linkable Sections in Wikipedia",
+  "version": "3.1.1",
+  "description": "Turns all Wikipedia (and Fandom) sections into links. To copy a link, click the URL icon left to any section.",
   "icons": {
     "48": "icons/logo-sm.png",
     "96": "icons/logo-lg.png"
@@ -20,7 +20,8 @@
   },
   "content_scripts": [{
     "matches": [
-      "*://*.wikipedia.org/wiki/*"
+      "*://*.wikipedia.org/wiki/*",
+      "*://jedipedia.fandom.com/wiki/*"
     ],
     "js": [
       "index.js"
