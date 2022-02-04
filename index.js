@@ -1,22 +1,22 @@
-function onError(error) {
-    console.log(`Error: ${error}`)
-}
+"use strict";
 
-function onGot(item) {
+const loadSettings = browser.storage.local.get("links");
+loadSettings.then((item) => {
+    // success
     if (item.links) {
-        item.links === "icons" ? icons() : links()
-    } else {
-        icons()
+        item.links === "icons" ? setIcons() : setUnderlined();
+        return;
     }
-}
-
-let getting = browser.storage.local.get("links")
-getting.then(onGot, onError)
+    setIcons();
+}, (error) => {
+    // error
+    console.log(`Error: ${error}`);
+});
 
 //? icon next to headline
-function icons() {
+function setIcons() {
     //* STYLE
-    const styleElem = document.head.appendChild(document.createElement("style"))
+    const styleElem = document.head.appendChild(document.createElement("style"));
     styleElem.innerHTML = `
     .anchor {
         position: absolute;
@@ -28,8 +28,7 @@ function icons() {
     h3:hover .anchor {
         display: inline;
     }
-`
-
+`;
     //* SCRIPT
     //! svg icon from: https://icons.getbootstrap.com/ thank you! 👌
     const icon = `
@@ -39,24 +38,23 @@ function icons() {
         <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z"/>
         <path d="M10 9.5a2.99 2.99 0 0 0 .288-1.46l-.167.167a1.99 1.99 0 0 1-.896.518 1.99 1.99 0 0 1-.518.896l-.167.167A3.004 3.004 0 0 0 10 9.501z"/>
     </svg>
-`
-    document.querySelectorAll(".mw-headline").forEach((headline) => {
-        const link = document.createElement("a")
-        link.href = "#" + headline.getAttribute("id")
-        link.classList.add("anchor")
-
-        link.insertAdjacentHTML("afterbegin", icon)
-        headline.insertBefore(link, headline.firstChild)
-    })
+`;
+    for (const headline of document.querySelectorAll(".mw-headline")) {
+        const link = document.createElement("a");
+        link.href = "#" + headline.getAttribute("id");
+        link.classList.add("anchor");
+        link.insertAdjacentHTML("afterbegin", icon);
+        headline.insertBefore(link, headline.firstChild);
+    }
 }
 
 //? headline as link
-function links() {
-    document.querySelectorAll(".mw-headline").forEach((headline) => {
-        const link = document.createElement("a")
-        link.href = "#" + headline.getAttribute("id")
-        link.style.color = "black"
-        headline.parentNode.insertBefore(link, headline)
-        link.appendChild(headline)
-    })
+function setUnderlined() {
+    for (const headline of document.querySelectorAll(".mw-headline")) {
+        const link = document.createElement("a");
+        link.href = "#" + headline.getAttribute("id");
+        link.style.color = "black";
+        headline.parentNode?.insertBefore(link, headline);
+        link.appendChild(headline);
+    }
 }

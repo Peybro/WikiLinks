@@ -13,6 +13,11 @@
   "permissions": [
     "storage"
   ],
+  "browser_action": {
+    "default_icon": "icons/logo-sm.png",
+    "default_title": "WikiLinks",
+    "default_popup": "options/options.html"
+  },
   "content_scripts": [
     {
       "matches": [

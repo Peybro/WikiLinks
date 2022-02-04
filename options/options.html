@@ -20,8 +20,8 @@
             cursor: pointer;
         }
 
-        input[type="submit"] {
-            padding: 10px 20px;
+        input[type="radio"] {
+            margin-left: -5px;
         }
     </style>
 </head>
@@ -29,13 +29,14 @@
 <body>
 
     <form>
-        <input type="radio" id="icons" name="link" value="icons">
-        <label for="icons">icons</label><br>
-        <input type="radio" id="links" name="link" value="links">
-        <label for="links">links</label>
-        <hr>
-        <p id="info">Reload your Wikipedia page to see the change.</p>
-        <input type="submit" value="Save">
+        <input type="radio" id="iconsRadioBtn" name="link" value="icons">
+        <label for="iconsRadioBtn">icons</label><br>
+        <input type="radio" id="underlinedRadioBtn" name="link" value="underlined">
+        <label for="underlinedRadioBtn">links</label>
+        <div id="info">
+            <hr>
+            <p>Reload your Wikipedia page to see the change.</p>
+        </div>
     </form>
 
     <script src="options.js"></script>

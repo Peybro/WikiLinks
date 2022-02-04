@@ -1,30 +1,26 @@
+// restore settings
+document.addEventListener("DOMContentLoaded", () => browser.storage.local.get("links").then((result) => {
+    // success
+    if (result.links === "icons" || (result.links !== "icons" && result.links !== "underlined")) {
+        document.querySelector("#iconsRadioBtn").checked = true
+    } else if (result.links === "underlined") {
+        document.querySelector("#underlinedRadioBtn").checked = true
+    }
+}, (error) => {
+    // error
+    console.log(`Error: ${error}`)
+}))
+
+// add listener
+document.querySelector("#iconsRadioBtn").addEventListener("change", saveOptions)
+document.querySelector("#underlinedRadioBtn").addEventListener("change", saveOptions)
+
+// save settings
 function saveOptions(e) {
     e.preventDefault()
     document.querySelector("#info").style.display = "block"
-    browser.storage.local.set({
-        links: document.querySelector("#icons").checked ? "icons" : "links",
-    })
-}
-
-function restoreOptions() {
-    function setCurrentChoice(result) {
-        if (
-            result.links === "icons" ||
-            (result.links !== "icons" && result.links !== "links")
-        ) {
-            document.querySelector("#icons").checked = true
-        } else if (result.links === "links") {
-            document.querySelector("#links").checked = true
-        }
+    const settingsObject = {
+        links: document.querySelector("#iconsRadioBtn").checked ? "icons" : "underlined",
     }
-
-    function onError(error) {
-        console.log(`Error: ${error}`)
-    }
-
-    let getting = browser.storage.local.get("links")
-    getting.then(setCurrentChoice, onError)
+    browser.storage.local.set(settingsObject)
 }
-
-document.addEventListener("DOMContentLoaded", restoreOptions)
-document.querySelector("form").addEventListener("submit", saveOptions)
