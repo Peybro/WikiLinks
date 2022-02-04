@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "WikiLinks - Anchors for Wikipedia",
-  "version": "3.0.2",
-  "description": "Adds a link anchor to each headline on a Wikipedia page.",
+  "name": "WikiLinks - linkable sections in Wikipedia",
+  "version": "3.1.0",
+  "description": "Turns all Wikipedia sections into links. To copy a link, click the URL icon left to any section.",
   "icons": {
     "48": "icons/logo-sm.png",
     "96": "icons/logo-lg.png"
@@ -18,14 +18,12 @@
     "default_title": "WikiLinks",
     "default_popup": "options/options.html"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.wikipedia.org/wiki/*"
-      ],
-      "js": [
-        "index.js"
-      ]
-    }
-  ]
+  "content_scripts": [{
+    "matches": [
+      "*://*.wikipedia.org/wiki/*"
+    ],
+    "js": [
+      "index.js"
+    ]
+  }]
 }
