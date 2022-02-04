@@ -5,7 +5,8 @@
   "description": "Turns all Wikipedia (and Fandom) sections into links. To copy a link, click the URL icon left to any section.",
   "icons": {
     "48": "icons/logo-sm.png",
-    "96": "icons/logo-lg.png"
+    "96": "icons/logo-lg.png",
+    "128": "icons/logo-xl"
   },
   "options_ui": {
     "page": "options/options.html"
