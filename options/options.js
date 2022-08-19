@@ -26,9 +26,9 @@ function saveOptions(e) {
   e.preventDefault();
   document.querySelector("#info").style.display = "block";
   const settingsObject = {
-    links: document.querySelector("#iconsRadioBtn").checked
-      ? "icons"
-      : "underlined",
+    links: document.querySelector("#iconsRadioBtn").checked ?
+      "icons" :
+      "underlined",
   };
   // suitable for Firefox and Chrome
   chrome.storage.local.set(settingsObject);

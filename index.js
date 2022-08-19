@@ -6,6 +6,12 @@ const loadSettings = chrome.storage.local.get(["links"], (item) => {
     item.links === "icons" ? setIcons() : setUnderlined();
     return;
   }
+
+  for (const tableHeader of document.querySelectorAll(".wikitable")) {
+    console.log(tableHeader)
+    tableHeader.classList.add("sticky-top")
+  }
+
   setIcons();
 });
 
@@ -15,17 +21,22 @@ function setIcons() {
   const styleElem = document.head.appendChild(document.createElement("style"));
   styleElem.innerHTML = `
     .anchor {
-        position: absolute;
-        transform: translateX(-100%) translateY(0.1em);
-        display: none;
+      position: absolute;
+      transform: translateX(-100%) translateY(0.1em);
+      display: none;
     }
 
     h2:not(#mw-toc-heading):hover .anchor, 
     h3:hover .anchor {
-        display: inline;
+      display: inline;
+    }
+
+    .wikitable.sticky-top tbody tr:first-of-type th {
+      position: sticky; 
+      top: 0;
     }
 `;
-  // SCRIPT
+  // SCRIPT        
   for (const headline of document.querySelectorAll(".mw-headline")) {
     const link = document.createElement("a");
     link.href = "#" + headline.getAttribute("id");
