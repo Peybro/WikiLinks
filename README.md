@@ -13,6 +13,7 @@ Clicking it will modify your current URL such that you can directly share the ar
 ## Install
 
 -   Get it <a href="https://addons.mozilla.org/de/firefox/addon/wikilinks/">here</a> for <b>Firefox</b>.
+-   And <a href="https://microsoftedge.microsoft.com/addons/detail/wikilinks-linkable-sect/nflecigeeponephffkjgkanmdjmhakia">for <b>Edge Chromium</b></a>. *yeii*
 -   For <b>Chrome</b> follow instructions at <a href="#Chrome_or_Chromium_Based_Browser">Deploy for Chromium</a>.
 
 ## Deploy Yourself
@@ -32,8 +33,7 @@ Goto <a href="chrome://extensions/">chrome://extensions/</a>, toggle on "Develop
 -   [✅] ~~Deploy as a real Firefox Addon (right now it's just usable via `about:debugging#/runtime/this-firefox`)~~
 -   [✅] ~~Replace EventListeners with CSS :hover for better performance~~
 -   [✅] ~~Remove the small white space between the headline and the icon~~
--   [💨] ~~Integrate JSX for better source code~~
--   [✅] ~~Develop for Chromium Brwosers, too~~ just recognized it already does...
+-   [✅] ~~Develop for Chromium Browsers, too~~ just recognized it already does...
 -   [🔜] Add support for other Wikis, e.g. Fanpedia
 
 ## A few more words
