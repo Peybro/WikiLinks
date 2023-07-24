@@ -1,25 +1,21 @@
 {
-  "manifest_version": 2,
-  "name": "WikiLinks - Linkable Sections in Wikipedia",
-  "version": "3.1.2",
-  "description": "Turns all Wikipedia (and Fandom) sections into links. To copy a link, click the URL icon left to any section.",
+  "manifest_version": 3,
+  "name": "Test - Adder",
+  "version": "1.0.0",
+  "description": "Adds 'Test' to the end of every 'google.com' page title",
   "icons": {
     "48": "icons/logo-sm.png",
     "96": "icons/logo-lg.png",
     "128": "icons/logo-xl.png"
   },
-  "options_ui": {
-    "page": "options/options.html"
-  },
-  "permissions": ["storage"],
+  "permissions": [],
   "browser_action": {
     "default_icon": "icons/logo-sm.png",
-    "default_title": "WikiLinks",
-    "default_popup": "options/options.html"
+    "default_title": "Test - Adder"
   },
   "content_scripts": [
     {
-      "matches": ["*://*.wikipedia.org/wiki/*", "*://*.fandom.com/*/wiki/*"],
+      "matches": ["*://*.google.com/*"],
       "js": ["index.js"]
     }
   ]
